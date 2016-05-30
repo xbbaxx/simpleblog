@@ -58,8 +58,8 @@
                     <a href="{% url 'search_tag' tag='django' %}"><span class="label label-success">Django</span></a>
                     <a href="{% url 'search_tag' tag='linux' %}"><span class="label label-info">Linux</span></a>
                     <a href="{% url 'search_tag' tag='mysql' %}"><span class="label label-warning">Mysql</span></a>
-                    <a href="{% url 'search_tag' tag='algorithm' %}"><span class="label label-danger">算法</span></a>
-                    <a href="{% url 'search_tag' tag='datastructure' %}"><span class="label label-info">数据结构</span></a>
+                    <a href="{% url 'search_tag' tag='algorithm' %}"><span class="label label-danger">Algorithm</span></a>
+                    <a href="{% url 'search_tag' tag='datastructure' %}"><span class="label label-info">Data Structure</span></a>
                     <a href="{% url 'search_tag' tag='html' %}"><span class="label label-success">HTML</span></a>
                     <a href="{% url 'search_tag' tag='css' %}"><span class="label label-primary">CSS</span></a>
                     <a href="{% url 'search_tag' tag='javascript' %}"><span class="label label-default">JavaScript</span></a>

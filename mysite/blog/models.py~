@@ -9,8 +9,6 @@ class Post(models.Model):
     author = models.ForeignKey(User)
     title = models.CharField(max_length=200)
     text = models.TextField()
-    tag = models.CharField(max_length = 50, blank = True)
-    click = models.IntegerField(default=0)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
@@ -23,7 +21,9 @@ class Post(models.Model):
         return self.title
 
 
-    
+    def get_absolute_url(self):
+        path = reverse('post_detail', kwargs={'pk':self.id})
+        return "http://127.0.0.1:8000%s" % path
 
 
 

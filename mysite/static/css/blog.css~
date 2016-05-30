@@ -10,8 +10,8 @@
     text-decoration: none;
 }
 .content {
-    background-color: #FFFFCC;
-    margin-left: 10px;
+    background-color: #CCFFCC;
+    margin-left: 5px;
 }
 h1, h2, h3, h4 {
     font-family: 'Lobster', cursive;
