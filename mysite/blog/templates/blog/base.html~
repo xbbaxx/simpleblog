@@ -39,30 +39,30 @@
   <!-- Default panel contents -->
   <div class="panel-heading">About Me And My Blog</div>
   <div class="panel-body">
-    <p>我是一个大美人</p>
+    <p>生活不止眼前的苟且</p>
   </div>
 
   <!-- List group -->
   <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-success">技术点滴</a>
-  <a href="#" class="list-group-item list-group-item-success">生活相关</a>
-  <a href="#" class="list-group-item list-group-item-success">电影赏析</a>
-  <a href="#" class="list-group-item list-group-item-success">诗和远方</a>
+  <a href="{% url 'search_category' category='Study' %}" class="list-group-item list-group-item-success"><span class="badge">{{ Study.post_set.count() }}</span>学习札记</a>
+  <a href="{% url 'search_category' category='Emotion' %}" class="list-group-item list-group-item-success"><span class="badge">0</span>生活情感</a>
+  <a href="{% url 'search_category' category='Movie' %}" class="list-group-item list-group-item-success"><span class="badge">0</span>电影赏析</a>
+  <a href="{% url 'search_category' category='Poem' %}" class="list-group-item list-group-item-success"><span class="badge">0</span>诗和远方</a>
 </div>
 </div>
             <div class="panel panel-default">
                 <div class="panel-heading">标签云</div>
                 <div class="panel-body">
-                    <a href="{% url 'search_tag' tag='python' %}"><span class="label label-default">Python</span></a>
-                    <a href="{% url 'search_tag' tag='flask' %}"><span class="label label-primary">Flask</span></a>
-                    <a href="{% url 'search_tag' tag='django' %}"><span class="label label-success">Django</span></a>
-                    <a href="{% url 'search_tag' tag='linux' %}"><span class="label label-info">Linux</span></a>
-                    <a href="{% url 'search_tag' tag='mysql' %}"><span class="label label-warning">Mysql</span></a>
-                    <a href="{% url 'search_tag' tag='algorithm' %}"><span class="label label-danger">Algorithm</span></a>
-                    <a href="{% url 'search_tag' tag='datastructure' %}"><span class="label label-info">Data Structure</span></a>
-                    <a href="{% url 'search_tag' tag='html' %}"><span class="label label-success">HTML</span></a>
-                    <a href="{% url 'search_tag' tag='css' %}"><span class="label label-primary">CSS</span></a>
-                    <a href="{% url 'search_tag' tag='javascript' %}"><span class="label label-default">JavaScript</span></a>
+                    <a href="{% url 'search_tag' tag='Python' %}"><span class="label label-default">Python</span></a>
+                    <a href="{% url 'search_tag' tag='Flask' %}"><span class="label label-primary">Flask</span></a>
+                    <a href="{% url 'search_tag' tag='Django' %}"><span class="label label-success">Django</span></a>
+                    <a href="{% url 'search_tag' tag='Linux' %}"><span class="label label-info">Linux</span></a>
+                    <a href="{% url 'search_tag' tag='Mysql' %}"><span class="label label-warning">Mysql</span></a>
+                    <a href="{% url 'search_tag' tag='Algorithm' %}"><span class="label label-danger">算法</span></a>
+                    <a href="{% url 'search_tag' tag='Datastructure' %}"><span class="label label-info">数据结构</span></a>
+                    <a href="{% url 'search_tag' tag='Html' %}"><span class="label label-success">HTML</span></a>
+                    <a href="{% url 'search_tag' tag='Css' %}"><span class="label label-primary">CSS</span></a>
+                    <a href="{% url 'search_tag' tag='Javascript' %}"><span class="label label-default">JavaScript</span></a>
                 </div>
                 </div>
             </div>

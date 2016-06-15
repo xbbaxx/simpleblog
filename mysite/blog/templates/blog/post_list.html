@@ -7,7 +7,7 @@
         <p>{{ post.text|linebreaks|truncatewords:50 }}</p> 
         <p class="text-right">
         <a href="{% url 'blog.views.post_detail' pk=post.pk %}"><span class="label label-info">ReadMore...</span></a>
-        <a href="{% url 'blog.views.post_detail' pk=post.pk %}"><span class="glyphicon glyphicon-tags"></span> {{ post.tag }}</a>
+        <a href="{% url 'search_tag' tag=post.tag %}"><span class="glyphicon glyphicon-tags"></span> {{ post.tag }}</a>
         </p>
         <hr>
    </div>

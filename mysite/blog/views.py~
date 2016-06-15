@@ -106,34 +106,12 @@ def search_tag(request, tag):
         paginator = Paginator(postAll, 10)
         page = request.GET.get('page')
         try:
-            posts = paginator.page(page)
+            posts = paginator.page(page
         except PageNotAnInteger:
                 posts = paginator.page(1)
         except EmptyPage:
                 posts = paginator.page(paginator.num_pages)
         return render(request,'blog/search_tag.html', {'posts' : posts, 'page' : True, 'error' : False})
-
-
-
-
-def search_category(request, category):
-    postAll = Post.objects.filter(category__names=category).order_by('-published_date')   
-    if len(postAll) == 0 :
-        return render(request,'blog/search_tag.html', {'posts' : postAll, 'error' : True})
-    else :
-        paginator = Paginator(postAll, 10)
-        page = request.GET.get('page')
-        try:
-            posts = paginator.page(page)
-        except PageNotAnInteger:
-                posts = paginator.page(1)
-        except EmptyPage:
-                posts = paginator.page(paginator.num_pages)
-        return render(request,'blog/search_tag.html', {'posts' : posts, 'page' : True, 'error' : False})
-
-
-
-
 
 
 

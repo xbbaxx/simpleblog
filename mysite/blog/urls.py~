@@ -12,5 +12,5 @@ urlpatterns = patterns('',
     url(r'^post/(?P<pk>[0-9]+)/remove/$', views.post_remove, name='post_remove'),
     url(r'^search/$', views.post_search, name = 'post_search'),
     url(r'^searchtag/(?P<tag>\w+)/$', views.search_tag, name='search_tag'),
-    url(r'^searchcategory/(?P<category>\w+)/$', views.search_category, name='search_category'),
+    url(r'^searchtag/(?P<category>\w+)/$', views.search_category, name='search_category'),
 )
